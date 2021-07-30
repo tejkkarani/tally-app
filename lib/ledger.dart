@@ -17,7 +17,7 @@ class _LedgerDetailsState extends State<LedgerDetails> {
     FlutterStatusbarManager.setStyle(StatusBarStyle.LIGHT_CONTENT);
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(130),
+        preferredSize: Size.fromHeight(140),
         child: Container(
           decoration: BoxDecoration(
             color: Color(0xff192B38),
@@ -25,6 +25,9 @@ class _LedgerDetailsState extends State<LedgerDetails> {
           child: SafeArea(
             child: Column(
               children: [
+                SizedBox(
+                  height: 10,
+                ),
                 Row(
                   children: [
                     Padding(

@@ -69,9 +69,15 @@ class _AddLedgerDetailsState extends State<AddLedgerDetails> {
                   Expanded(
                     child: SizedBox(),
                   ),
-                  Icon(
-                    MyFlutterApp.close1,
-                    size: 18,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                      Navigator.pop(context);
+                    },
+                    child: Icon(
+                      MyFlutterApp.close1,
+                      size: 18,
+                    ),
                   ),
                   SizedBox(
                     width: 5,
@@ -823,7 +829,10 @@ class _AddLedgerDetailsState extends State<AddLedgerDetails> {
             "Create",
             style: GoogleFonts.poppins(color: Colors.white, fontSize: 14),
           ),
-          onPressed: () async {},
+          onPressed: () async {
+            Navigator.pop(context);
+            Navigator.pop(context);
+          },
           width: 100,
         ),
         DialogButton(
@@ -839,7 +848,10 @@ class _AddLedgerDetailsState extends State<AddLedgerDetails> {
             "Cancel",
             style: GoogleFonts.poppins(color: Color(0xff192B38), fontSize: 14),
           ),
-          onPressed: () async {},
+          onPressed: () async {
+            Navigator.pop(context);
+            Navigator.pop(context);
+          },
           width: 100,
         ),
       ],
@@ -851,7 +863,7 @@ class _AddLedgerDetailsState extends State<AddLedgerDetails> {
     FlutterStatusbarManager.setStyle(StatusBarStyle.LIGHT_CONTENT);
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(130),
+        preferredSize: Size.fromHeight(140),
         child: Container(
           decoration: BoxDecoration(
             color: Color(0xff192B38),
@@ -859,6 +871,9 @@ class _AddLedgerDetailsState extends State<AddLedgerDetails> {
           child: SafeArea(
             child: Column(
               children: [
+                SizedBox(
+                  height: 10,
+                ),
                 Row(
                   children: [
                     Padding(

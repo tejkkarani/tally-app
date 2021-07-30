@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_statusbar_manager/flutter_statusbar_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:tally_app/add_ledger.dart';
@@ -90,6 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    FlutterStatusbarManager.setStyle(StatusBarStyle.LIGHT_CONTENT);
     double width = MediaQuery.of(context).size.width;
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
